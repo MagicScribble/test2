@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. Page title changed -->
+    <title>Free Gifts - Banana Sky Studio</title>
+    <!-- 2. Meta description changed -->
+    <meta name="description" content="Download free exclusive gifts for your Banana Sky apps. Free images, activities, and more!">
+    <meta property="og:title" content="Free Gifts - Banana Sky Studio">
+    <meta property="og:description" content="Download free exclusive gifts for your Banana Sky apps. Free images, activities, and more!">
+    <!-- TODO: Update this image to a relevant one for your bonus page -->
+    <meta property="og:image" content="https://www.yourwebsite.com/assets/img/gifts-page-og-image.jpg"> 
+    <style>
+        /* --- Base Styles from your Blog --- */
+        html { scroll-behavior: smooth; }
+        body { background-color: #c9e4ff; margin: 0; padding: 20px; font-family: "Segoe UI", sans-serif; color: #333; }
+        .header { position: sticky; top: 20px; z-index: 1000; max-width: 720px; margin: 0 auto 20px auto; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 0 2rem; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+        .nav-logo a { font-weight: bold; font-size: 1.2rem; color: #4f7d81; text-decoration: none; display: flex; align-items: center; }
+        .nav-logo img { height: 35px; margin-right: 10px; }
+        .nav-menu { display: flex; list-style: none; margin: 0; padding: 0; gap: 1.5rem; }
+        .nav-menu a { font-weight: 500; text-decoration: none; color: #366063; transition: color 0.3s; }
+        .nav-menu a:hover { color: #006464; font-weight: bold;}
+        .nav-menu a.active { color: #006464; text-shadow: 0 0 0px rgba(0, 100, 100, 0.5); font-weight: bold;}
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .hamburger .bar { width: 25px; height: 3px; background-color: #0e99ac; border-radius: 5px; transition: all 0.3s ease-in-out; }
+        .container { max-width: 720px; margin: auto; padding: 2rem; line-height: 1.7; background: #fff; border-radius: 1rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+        h1, h2, h3 { color: #0e99ac; line-height: 1.3; }
+        h1 { font-size: 2.5em; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.8em; margin-top: 2.5rem; }
+        a { color: #e67e22; text-decoration: none; font-weight: 600; }
+        a:hover { color: #e65322; text-decoration: underline; }
+        hr { border: 0; height: 1px; background: #e0e0e0; margin: 40px 0; }
+        .post-meta { font-size: 0.9rem; color: #555; margin-bottom: 1.5rem; }
+        .hero-image { width: 100%; border-radius: 12px; margin-bottom: 2rem; }
+        blockquote { border-left: 4px solid #0e99ac; margin: 1.5em 0; padding: 0.5em 1.5em; color: #555; background-color: #f8f9fa; border-radius: 0 8px 8px 0; }
+        footer { text-align: center; padding: 2rem 0; color: #555; font-size: 0.9rem; }
+
+        /* --- Styles for this Page --- */
+        .download-gallery {
+            display: grid;
+            /* Create 2 columns on desktop */
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .gallery-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px; /* Fixed height for a uniform grid */
+            object-fit: cover; /* This crops the image nicely */
+            display: block;
+        }
+        .gallery-item-content {
+            padding: 1rem;
+            text-align: center;
+        }
+        .gallery-item-content h3 {
+            /* Override default h3 margins */
+            margin-top: 0; 
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #e67e22; /* Use site's link color */
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #e65322; /* Use site's link-hover color */
+            color: #ffffff;
+            text-decoration: none;
+            transform: scale(1.05);
+        }
+
+        /* --- Responsive Styles --- */
+
+        /* This makes the gallery 1 column on smaller screens */
+        @media (max-width: 600px) {
+            .download-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile nav styles from your blog */
+        @media (max-width: 768px) { 
+            body { padding: 10px; } 
+            .header { top: 10px; } 
+            .nav-menu { position: absolute; top: 60px; left: 0; flex-direction: column; background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(5px); width: 100%; text-align: center; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 1rem 0; gap: 0; transition: transform 0.3s ease-in-out; transform: translateX(-110%); } 
+            .nav-menu.active { transform: translateX(0); } 
+            .nav-menu li { padding: 1rem 0; } 
+            .hamburger { display: flex; } 
+            .hamburger.active .bar:
+            .hamburger.active .bar:nth-child(2) { opacity: 0; } 
+            .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); } 
+            .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); } 
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <!-- TODO: Make sure this path is correct -->
+                    <img src="assets/img/Logo icon small.png" alt="Banana Sky Apps Logo">
+                    <span>Go Bananas!</span>
+                </a>  
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Our Apps</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <!-- 3. Nav link updated -->
+                <li><a href="gifts.html" class="active">Gifts</a></li>
+                <li><a href="contact.html">Contact & Support</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- 4. Main H1 title changed -->
+            <h1>Your Free Gifts!</h1>
+            <!-- 5. Subtitle changed -->
+            <p class="post-meta">Special freebies from the Banana Sky Team</p>
+
+            <!-- 6. Intro text changed -->
+            <p>Thank you for downloading our app! As a special thank-you, we're giving you these exclusive free gifts. You can download them and use them in your projects, on social media, or anywhere you like.</p>
+            
+            <blockquote>
+                <strong>How to Download:</strong>
+                <ul style="padding-left: 20px; margin-top: 10px;">
+                    <li><strong>Desktop:</strong> Click the "Download" button.</li>
+                    <li><strong>Mobile:</strong> Tap and hold the "Download" button, then choose "Download Linked File" or "Save Link As".</li>
+                </ul>
+            </blockquote>
+
+            <!-- 7. Gallery title changed -->
+            <h2>Current Gifts</h2>
+            
+            <div class="download-gallery">
+
+                <!-- Gallery Item 1 - Christmas Pack -->
+                <div class="gallery-item">
+                    <!-- 
+                      TODO: 
+                      1. Replace 'href' with the path to your REAL image.
+                      2. Replace 'src' with the same path.
+                      3. Update 'download' with a nice filename.
+                    -->
+                    <a href="https://placehold.co/600x400/D10000/FFFFFF?text=Christmas+Pack" download="christmas-pack-1.jpg">
+                        <img src="https://placehold.co/600x400/D10000/FFFFFF?text=Christmas+Pack" alt="Red Christmas ornament">
+                    </a>
+                    <div class="gallery-item-content">
+                        <h3>Christmas Pack</h3>
+                        <a href="https://placehold.co/600x400/D10000/FFFFFF?text=Christmas+Pack" download="christmas-pack-1.jpg" class="download-btn">Download</a>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 - Christmas Pack -->
+                <div class="gallery-item">
+                    <!-- TODO: Replace href, src, and download attributes -->
+                    <a href="https://placehold.co/600x400/006400/FFFFFF?text=Christmas+Pack" download="christmas-pack-2.jpg">
+                        <img src="https://placehold.co/600x400/006400/FFFFFF?text=Christmas+Pack" alt="Green pine tree">
+                    </a>
+                    <div class="gallery-item-content">
+                        <h3>Christmas Pack</h3>
+                        <a href="https://placehold.co/600x400/006400/FFFFFF?text=Christmas+Pack" download="christmas-pack-2.jpg" class="download-btn">Download</a>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 - Placeholder for new pack -->
+                <div class="gallery-item">
+                    <a href="#" style="pointer-events: none;">
+                        <img src="https://placehold.co/600x400/aaaaaa/FFFFFF?text=Coming+Soon!" alt="Coming soon placeholder">
+                    </a>
+                    <div class="gallery-item-content">
+                        <h3 style="color: #888;">Halloween Pack</h3>
+                        <span class="download-btn" style="background-color: #aaa; cursor: not-allowed; color: #eee;">Coming Soon!</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 - Placeholder for new pack -->
+                <div class="gallery-item">
+                    <a href="#" style="pointer-events: none;">
+                        <img src="https://placehold.co/600x400/aaaaaa/FFFFFF?text=Coming+Soon!" alt="Coming soon placeholder">
+                    </a>
+                    <div class="gallery-item-content">
+                        <h3 style="color: #888;">Coloring Pages</h3>
+                         <span class="download-btn" style="background-color: #aaa; cursor: not-allowed; color: #eee;">Coming Soon!</span>
+                    </div>
+                </div>
+
+                <!-- Add more gallery items here as you create them -->
+
+            </div>
+            
+            <hr>
+            
+            <p>We hope you enjoy these gifts! Check back later for new freebies, and don't forget to read our latest articles on the <a href="blog.html">blog</a>.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Banana Sky Apps. All Rights Reserved. | <a href="index.html">Back to Apps</a></p>
+    </footer>
+
+    <!-- Hamburger Menu Script from your blog -->
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
