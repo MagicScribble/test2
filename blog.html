@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B6PMLYPJT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-1B6PMLYPJT');
+    </script>
+    <title>Blog | Banana Sky Studio</title>
+    <meta name="description" content="Welcome to the Banana Sky Blog! Find updates on our Bubuloo kids learning games, behind-the-scenes looks at development, and helpful tips for parents.">
+    <meta property="og:title" content="Banana Sky Studio Blog">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #c9e4ff; margin: 0; padding: 20px; font-family: "Segoe UI", sans-serif; color: #222; }
+        .header { position: sticky; top: 20px; z-index: 1000; max-width: 720px; margin: 0 auto 20px auto; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 0 2rem; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+        .nav-logo a { font-weight: bold; font-size: 1.2rem; color: #4f7d81; text-decoration: none; display: flex; align-items: center; }
+        .nav-logo img { height: 40px; margin-right: 5px; }
+        .nav-menu { display: flex; list-style: none; margin: 0; padding: 0; gap: 1.5rem; }
+        .nav-menu a { font-weight: 500; text-decoration: none; color: #366063; transition: color 0.3s; }
+        .nav-menu a:hover { color: #006464; font-weight: bold;}
+        .nav-menu a.active { color: #006464; text-shadow: 0 0 0px rgba(0, 100, 100, 0.5); font-weight: bold;}
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .hamburger .bar { width: 25px; height: 3px; background-color: #0e99ac; border-radius: 5px; transition: all 0.3s ease-in-out; }
+        .container { max-width: 720px; margin: auto; padding: 2rem; line-height: 1.6; background: linear-gradient(to bottom right, rgba(240, 247, 255, 0.6), rgba(245, 250, 255, 0.7)); border-radius: 1rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+        h1, h2, h3 { color: #0e99ac; }
+        h1 { font-size: 2.5em; }
+        h2 { font-size: 2em; }
+        h3 { font-size: 1.7em; }
+        a { color: #e67e22; text-decoration: none; }
+        a:hover { color: #006464; text-shadow: 0 0 1px rgba(0, 100, 100, 0.5); }
+        hr { border: 0; height: 1px; background: #e0e0e0; margin: 40px 0; }
+        .blog-post {
+          display: flex;
+          gap: 20px; /* Adds space between image and text */
+          align-items: center;
+          margin-bottom: 2rem;
+        }
+        
+        .featured-image {
+          width: 150px;
+          height: 150px;
+          object-fit: cover; /* Prevents image from stretching */
+          border-radius: 12px;
+          flex-shrink: 0; /* Prevents image from shrinking */
+        }
+        .post-content {
+          flex-grow: 1; /* Allows text content to fill the space */
+        }
+        .post-meta { font-size: 0.9rem; color: #555; margin-bottom: 0.5rem; }
+        .read-more-btn { color: #e67e22; font-weight: bold; text-decoration: none; }
+        .read-more-btn:hover { color: #e65322; text-shadow: none; }
+        footer { text-align: center; padding: 2rem 0; color: #555; font-size: 0.9rem; }
+        @media (max-width: 768px) { body { padding: 10px; } .header { top: 10px; } .nav-menu { position: absolute; top: 60px; left: 0; flex-direction: column; background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(5px); width: 100%; text-align: center; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 1rem 0; gap: 0; transition: transform 0.3s ease-in-out; transform: translateX(-110%); } .nav-menu.active { transform: translateX(0); } .nav-menu li { padding: 1rem 0; } .hamburger { display: flex; } .hamburger.active .bar:nth-child(2) { opacity: 0; } .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); } .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); } 
+        .blog-post {
+        flex-direction: column; /* Stack image on top of text */
+        align-items: flex-start;
+        }
+        .featured-image {
+            width: 100%;
+            height: 180px; /* Adjust height for mobile view */
+            margin-bottom: 1rem;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/img/Logo icon small.png" alt="Banana Sky Apps Logo">
+                    <span>Go Bananas!</span>
+                </a>  
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Our Apps</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact & Support</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Banana Sky Blog</h1>
+            <p>Welcome! Here you'll find updates, behind-the-scenes looks at app development, and tips for parents.</p>
+            <hr>
+            
+            <!-- NEW ARTICLE ADDED HERE -->
+            <article class="blog-post">
+                <a href="blog-post-science-behind-play.html"  target="_blank"><img src="assets/img/play-is-learning.webp" alt="Child happily playing with colorful building blocks" class="featured-image"></a>
+                <div class="post-content">
+                    <a href="blog-post-science-behind-play.html"  target="_blank"><h2>Why 'Just Playing' is Serious Learning</h2></a>
+                    <p class="post-meta">Posted on October 20, 2025</p>
+                    <p>A while ago, I met a friend over coffee, and she told me something that stayed with me: it had never been obvious to her that learning could be fun. For her, real learning had always felt like... </p>
+                    <a href="blog-post-science-behind-play.html" class="read-more-btn">Read More &rarr;</a>
+                </div>
+            </article>
+
+            <hr>
+            
+            <article class="blog-post">
+                <a href="blog-post-parent-guilt.html"  target="_blank"><img src="assets/img/parent-hero.webp" alt="A soft, comforting image representing parenthood" class="featured-image"></a>
+                <div class="post-content">
+                    <a href="blog-post-parent-guilt.html"  target="_blank"><h2>A Letter to Parents Who Feel They’re Not Enough</h2></a>
+                    <p class="post-meta">Posted on October 17, 2025</p>
+                    <p>If you’ve ever gone to bed wondering, “Did I do enough for my child today?” — you’re not alone. Almost every parent I know has felt that quiet wave of guilt after a long day. Maybe you let your child watch an extra episode. Maybe dinner wasn’t homemade. Maybe you lost patience when you swore you wouldn’t. </p>
+                    <a href="blog-post-parent-guilt.html" class="read-more-btn">Read More &rarr;</a>
+                </div>
+            </article>
+
+            <hr>
+            
+            <article class="blog-post">
+                <img src="assets/img/5more-minutes.webp" alt="Screen time for kids" class="featured-image">
+                <div class="post-content">
+                    <a href="blog-post-5more-minutes.html"  target="_blank"><h2>When “Just Five More Minutes!” Never Ends</h2></a>
+                    <p class="post-meta">Posted on October 16, 2025</p>
+                    <p>We’ve all been there. You call your child for dinner, and they answer, “Just five more minutes!” — eyes glued to the iPad. Those “five minutes” turn into twenty, and suddenly you’re in the middle of a mini standoff.</p>
+                    <a href="blog-post-5more-minutes.html" class="read-more-btn">Read More &rarr;</a>
+                </div>
+            </article>
+
+            <hr>
+            
+            <article class="blog-post">
+                <img src="assets/img/scratch-write.webp" alt="Colorful scratch art from the Bubuloo app" class="featured-image">
+                <div class="post-content">
+                    <a href="blog-post-finger-swipes.html"  target="_blank"><h2>From Finger Swipes to Pencil Grips: How Digital Play Builds a Foundation for Writing</h2></a>
+                    <p class="post-meta">Posted on October 14, 2025</p>
+                    <p>If your toddler has ever giggled while “scratching” colourful surprises on a screen, you might not realize that this simple action is doing something profound — building the foundation for writing.</p>
+                    <a href="blog-post-finger-swipes.html" class="read-more-btn">Read More &rarr;</a>
+                </div>
+            </article>
+
+            <hr>
+            
+            <article class="blog-post">
+                <img src="assets/img/screentime-featured.webp" alt="Child happily playing with a tablet" class="featured-image">
+                <div class="post-content">
+                    <a href="blog-post-screentime.html"  target="_blank"><h2>Navigating the Digital Playground: 5 Tips for Healthy, Happy Screen Time</h2></a>
+                    <p class="post-meta">Posted on October 10, 2025</p>
+                    <p>Let's be honest: in a world filled with screens, finding the right balance for our little ones can feel like a puzzle. As a parent, you want to unlock the benefits of amazing educational apps while protecting your child from the pitfalls of too much passive screen time.</p>
+                    <a href="blog-post-screentime.html" class="read-more-btn">Read More &rarr;</a>
+                </div>
+            </article>
+
+            <hr>
+
+            <article class="blog-post">
+                <img src="assets/img/bubuloo-story-featured.webp" alt="Drawing of the Bubuloo app character" class="featured-image">
+                <div class="post-content">
+                    <a href="blog-post-bubuloo-story.html"  target="_blank"><h2>Creating Our First Game: The Bubuloo Story</h2></a>
+                    <p class="post-meta">Posted on October 01, 2025</p>
+                    <p>Bubuloo didn’t start as a company project — it started as a parent project. My little one never liked drawing. Every time I put crayons or pencils in front of him, he’d give it a try for a few seconds, then move on.</p>
+                    <a href="blog-post-bubuloo-story.html" class="read-more-btn">Read More &rarr;</a>
+                </div>
+            </article>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Banana Sky Apps. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B6PMLYPJT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-1B6PMLYPJT');
+    </script>
+    <title>Banana Sky Studio | Fun & Safe Educational Apps for Kids</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="description" content="Discover fun, safe, and ad-free educational apps for toddlers and preschoolers. Banana Sky Studio creates engaging games like Bubuloo that make learning an adventure!">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bananasky.net/">
+    <meta property="og:title" content="Banana Sky Studio | Fun & Safe Educational Apps for Kids">
+    <meta property="og:description" content="Discover fun, safe, and ad-free educational apps for toddlers and preschoolers. Banana Sky Studio creates engaging games like Bubuloo that make learning an adventure!">
+    <meta property="og:image" content="https://bananasky.net/assets/img/Logo icon.png">
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bananasky.net/">
+    <meta property="twitter:title" content="Banana Sky Studio | Fun & Safe Educational Apps for Kids">
+    <meta property="twitter:description" content="Discover fun, safe, and ad-free educational apps for toddlers and preschoolers. Banana Sky Studio creates engaging games like Bubuloo that make learning an adventure!">
+    <meta property="twitter:image" content="https://bananasky.net/assets/img/Logo icon.png">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #c9e4ff; margin: 0; padding: 20px 20px 0 20px; font-family: "Segoe UI", sans-serif; color: #222; }
+        .header { position: sticky; top: 20px; z-index: 1000; max-width: 720px; margin: 0 auto 20px auto; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 0 2rem; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+        .nav-logo a {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #4f7d81;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .nav-logo img { height: 40px; margin-right: 5px; } /* <-- Style for logo image */
+        .nav-menu { display: flex; list-style: none; margin: 0; padding: 0; gap: 1.5rem; }
+        .nav-menu a { font-weight: 500; text-decoration: none; color: #366063; transition: color 0.3s; }
+        .nav-menu a:hover { color: #006464; font-weight: bold;}
+        .nav-menu a.active { color: #006464; text-shadow: 0 0 0px rgba(0, 100, 100, 0.5); font-weight: bold;}
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .hamburger .bar { width: 25px; height: 3px; background-color: #0e99ac; border-radius: 5px; transition: all 0.3s ease-in-out; }
+        .container { max-width: 720px; margin: auto; padding: 2rem; line-height: 1.6; background: linear-gradient(to bottom right, rgba(240, 247, 255, 0.6), rgba(245, 250, 255, 0.7)); border-radius: 1rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+        h1, h2, h3 { color: #0e99ac; }
+        /* Set a unique, descending font size for each level */
+        h1 {
+          font-size: 2.5em; /* Largest */
+        }
+        
+        h2 {
+          font-size: 2em;   /* Medium */
+        }
+        
+        h3 {
+          font-size: 1.7em; /* Smallest */
+        }
+        a { color: #e67e22; text-decoration: none; }
+        a:hover { color: #006464; text-shadow: 0 0 1px rgba(0, 100, 100, 0.5); }
+        hr { border: 0; height: 1px; background: #e0e0e0; margin: 40px 0; }
+        footer { text-align: center; padding: 2rem 0; color: #555; font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .header { top: 10px; }
+            .nav-menu {
+                position: absolute;
+                top: 60px;
+                left: 0; /* Let transform handle positioning */
+                flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(5px);
+                width: 100%;
+                text-align: center;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 1rem 0;
+                gap: 0;
+                /* --- UPDATED HIDING MECHANISM --- */
+                transition: transform 0.3s ease-in-out;
+                transform: translateX(-110%); /* Move completely off-screen */
+            }
+            .nav-menu.active {
+                transform: translateX(0); /* Move back to original position */
+            }
+            .nav-menu li { padding: 1rem 0; }
+            .hamburger { display: flex; }
+            .hamburger.active .bar:nth-child(2) { opacity: 0; }
+            .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+            .app-item { flex-direction: column; align-items: center; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/img/Logo icon small.png" alt="Banana Sky Apps Logo">
+                    <span>Go Bananas!</span>
+                </a>  
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Our Apps</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact & Support</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="contact">
+                <h1>📬 Contact </h1>
+                <p>I’m open to collaboration, promotion, and partnership proposals. If you’d like to work with me, please reach out:</p>
+                <p><strong><a href="mailto:magicscribble@icloud.com">magicscribble@icloud.com</a></strong></p>
+            </section>
+            <hr>
+            <section id="app-support">
+                <h2>App Support</h2>
+                <p>If there are some problems or you have suggestions for the apps, please contact us! <a href="support.html" target="_blank">Go to App Support Page</a>.</p>
+            </section>
+            <hr>
+            <section id="privacy">
+                <h2>Privacy</h2>
+                <p>Privacy Policy For Bubuloo games: <a href="https://magicscribble.github.io/privacy-policy/" target="_blank">Read the Privacy Policy</a></p>
+                <p>Privacy Policy For Mosaic Pixel Art: Avatar Maker: <a href="privacy.html" target="_blank">Read the Privacy Policy</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Banana Sky Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  RUBY_VERSION = "3.2.2"
+
+[[headers]]
+  # Apply these rules to all files in the /assets/ directory
+  for = "/assets/*"
+  [headers.values]
+    # This is the most important part!
+    # public: Allows the file to be cached by browsers and CDNs.
+    # max-age=31536000: Sets the cache lifetime to one year in seconds.
+    # immutable: Tells modern browsers this file will NEVER change, so don't even bother checking.
+    Cache-Control = "public, max-age=31536000, immutable"
